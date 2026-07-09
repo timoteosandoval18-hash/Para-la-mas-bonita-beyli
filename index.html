@@ -13,108 +13,53 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            overflow: hidden;
-        }
-        
-        /* Fondo atardecer animado */
-        .atardecer {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            background: linear-gradient(180deg, #ff6b35, #f7931e, #ff1493, #6a0dad);
-            background-size: 400% 400%;
-            animation: degradado 12s ease infinite;
-        }
-        
-        @keyframes degradado {
-            0% { background-position: 50% 0%; }
-            50% { background-position: 50% 100%; }
-            100% { background-position: 50% 0%; }
-        }
-        
-        /* Nubesitas para más vibes */
-        .nube {
-            position: absolute;
-            background: rgba(255, 255, 255, 0.3);
-            border-radius: 100px;
-            animation: moverNube 30s linear infinite;
-        }
-        
-        .nube:nth-child(1) {
-            width: 100px; height: 40px;
-            top: 20%; left: -100px;
-            animation-delay: 0s;
-        }
-        
-        .nube:nth-child(2) {
-            width: 60px; height: 25px;
-            top: 35%; left: -60px;
-            animation-delay: 8s;
-            animation-duration: 25s;
-        }
-        
-        @keyframes moverNube {
-            from { transform: translateX(0); }
-            to { transform: translateX(120vw); }
+            /* Fondo cremita con rosita leve */
+            background: linear-gradient(135deg, #fff8f0, #ffeef8);
         }
         
         .container {
             display: flex;
             align-items: center;
-            gap: 40px;
-            padding: 40px;
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            border: 2px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-            max-width: 900px;
+            gap: 60px;
+            padding: 50px;
+            max-width: 1200px;
             margin: 20px;
         }
         
         .dibujo {
-            max-width: 320px;
+            max-width: 450px;
             width: 100%;
             height: auto;
             flex-shrink: 0;
-            filter: drop-shadow(0 4px 15px rgba(0,0,0,0.3));
+            filter: drop-shadow(0 6px 20px rgba(0,0,0,0.15));
         }
         
         .texto {
-            font-size: 32px;
-            color: #fff;
+            font-size: 42px;
+            color: #d63384;
             text-align: left;
             line-height: 1.2;
             font-weight: 800;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
         }
         
         /* Para celular */
         @media (max-width: 768px) {
             .container {
                 flex-direction: row;
-                gap: 20px;
-                padding: 25px;
+                gap: 25px;
+                padding: 30px 20px;
             }
             .dibujo {
-                max-width: 150px;
+                max-width: 200px;
             }
             .texto {
-                font-size: 18px;
+                font-size: 24px;
                 line-height: 1.1;
             }
         }
     </style>
 </head>
 <body>
-    <div class="atardecer">
-        <div class="nube"></div>
-        <div class="nube"></div>
-    </div>
-    
     <div class="container">
         <img src="conejito.png" alt="Conejito con lirio" class="dibujo">
         
@@ -133,4 +78,4 @@
         </div>
     </div>
 </body>
-  </html>
+</html>
